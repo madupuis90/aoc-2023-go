@@ -1,16 +1,24 @@
-package day2
+package main
 
 import (
+	"fmt"
 	"regexp"
 	"strconv"
 
 	"examples.go/aoc-2023-go/util"
 )
 
-func part1(f string) int {
+func main() {
+	part1 := part1("input.txt")
+	part2 := part2("input.txt")
 
-	scanner := util.CreateScannerFromFile(f)
+	fmt.Printf("Part 1: %v\n", part1)
+	fmt.Printf("Part 2: %v\n", part2)
+}
+
+func part1(f string) int {
 	total := 0
+	scanner := util.CreateScannerFromFile(f)
 	blueLimit := 14
 	redLimit := 12
 	greenLimit := 13
@@ -36,9 +44,8 @@ func part1(f string) int {
 }
 
 func part2(f string) int {
-
-	scanner := util.CreateScannerFromFile(f)
 	total := 0
+	scanner := util.CreateScannerFromFile(f)
 
 	for scanner.Scan() {
 		line := scanner.Text()

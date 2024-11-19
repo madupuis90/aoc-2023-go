@@ -3,10 +3,19 @@
 ## Project Structure
 The code for each day is contained in their own folders /day1, /day2. /day3...etc.
 
-Each folder have the the code for the solutions, input and sample files and a `main_test.go` file that tests the solutions.
+Each folders contain:
+-  `main.go` to run the input
+-  `main_test.go` to test the samples and other functions
+-  the input and samples for part1 and part2
 
-To run all tests for a specific day, use this command:
+Other utility functions can be found in `util.go`
+#
 
-`go test ./dayX -v` 
+To get started, go the the desired day:
+`cd day<num>`
 
-To run a specific test, you can use: `go test ./dayX -run TestSamplePart1 -v`
+You can get the results from the input by running:
+`go run main.go` 
+
+You can run the tests on the samples and other functions with:
+`go test`

@@ -19,8 +19,8 @@ func main() {
 }
 
 func part1(f string) int {
-	graph2D := createGraph2DFromFile(f)
 	total := 0
+	graph2D := createGraph2DFromFile(f)
 	accumulatorString := ""
 	isAdjacent := false
 
@@ -51,8 +51,8 @@ func part1(f string) int {
 }
 
 func part2(f string) int {
-	graph2D := createGraph2DFromFile(f)
 	total := 0
+	graph2D := createGraph2DFromFile(f)
 
 	numString1 := ""
 	numString2 := ""

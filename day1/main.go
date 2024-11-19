@@ -1,6 +1,7 @@
-package day1
+package main
 
 import (
+	"fmt"
 	"log"
 	"regexp"
 	"strconv"
@@ -9,10 +10,18 @@ import (
 	"examples.go/aoc-2023-go/util"
 )
 
-func part1(f string) int {
+func main() {
+	part1 := part1("input.txt")
+	part2 := part2("input.txt")
 
-	scanner := util.CreateScannerFromFile(f)
+	fmt.Printf("Part 1: %v\n", part1)
+	fmt.Printf("Part 2: %v\n", part2)
+}
+
+func part1(f string) int {
 	total := 0
+	scanner := util.CreateScannerFromFile(f)
+
 	// Iterate over lines, build array of digits to get first and last
 	for scanner.Scan() {
 		var digits []string
@@ -39,7 +48,7 @@ func part1(f string) int {
 }
 
 func part2(f string) int {
-
+	total := 0
 	spelledDigits := map[string]string{
 		"one":   "1",
 		"two":   "2",
@@ -61,7 +70,7 @@ func part2(f string) int {
 		"enin":  "9",
 	}
 	scanner := util.CreateScannerFromFile(f)
-	total := 0
+
 	/*
 		I was initially using a single regex and building a slice of all matches just line in part one, but I couldn't
 		get the right answer with the input altough the sample was fine... I ended up googling and found out that there are

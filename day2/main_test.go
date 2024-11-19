@@ -1,14 +1,12 @@
-package day2
+package main
 
 import (
-	"fmt"
 	"testing"
 )
 
 func TestSamplePart1(t *testing.T) {
 	result := part1("sample1.txt")
 	want := 8
-	fmt.Println(result)
 
 	if result != want {
 		t.Fatalf(`Wanted %v, but got %v`, want, result)
@@ -18,21 +16,10 @@ func TestSamplePart1(t *testing.T) {
 func TestSamplePart2(t *testing.T) {
 	result := part2("sample2.txt")
 	want := 2286
-	fmt.Println(result)
 
 	if result != want {
 		t.Fatalf(`Wanted %v, but got %v`, want, result)
 	}
-}
-
-func TestInputPart1(t *testing.T) {
-	result := part1("input.txt")
-	fmt.Println(result)
-}
-
-func TestInputPart2(t *testing.T) {
-	result := part2("input.txt")
-	fmt.Println(result)
 }
 
 func TestMaxColorInString(t *testing.T) {
