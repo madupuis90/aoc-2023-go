@@ -15,7 +15,7 @@ func TestSamplePart1(t *testing.T) {
 
 func TestSamplePart2(t *testing.T) {
 	result := part2("sample2.txt")
-	want := 0
+	want := 5905
 
 	if result != want {
 		t.Fatalf(`Wanted %v, but got %v`, want, result)
